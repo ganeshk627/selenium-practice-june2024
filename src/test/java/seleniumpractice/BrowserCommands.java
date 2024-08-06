@@ -3,7 +3,7 @@ package seleniumpractice;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class NavigationCommands {
+public class BrowserCommands {
     public static void main(String[] args) {
 
         // Opening browser - chrome
@@ -11,18 +11,15 @@ public class NavigationCommands {
 
         // Open Google Application
         driver.get("https://www.google.com/");
-        // Open Facebook Application
-        driver.get("https://www.facebook.com/");
-//        driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
 
-        // Navigation Commands
-        driver.navigate().back();
-        driver.navigate().forward();
-        driver.navigate().refresh();
-        
+        // Browser Commands
+        driver.manage().window().maximize();
+        driver.manage().window().fullscreen();
+        driver.manage().window().minimize();
+        driver.manage().window().maximize();
+
         // Close
-//        driver.close();
-        driver.quit();
-
+//        driver.close(); // current tab
+        driver.quit(); // whole browser/ window
     }
 }

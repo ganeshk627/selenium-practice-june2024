@@ -2,21 +2,23 @@ package seleniumpractice;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.edge.EdgeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 
-public class FirstLaunch {
+public class NavigationCommands {
     public static void main(String[] args) {
-        // Browser open
-//        ChromeDriver chromeDriver = new ChromeDriver();
-//        FirefoxDriver firefoxDriver = new FirefoxDriver();
-//        EdgeDriver edgeDriver = new EdgeDriver();
 
         // Opening browser - chrome
         WebDriver driver = new ChromeDriver();
 
-        // Open Test Application
+        // Open Google Application
         driver.get("https://www.google.com/");
+        // Open Facebook Application
+        driver.get("https://www.facebook.com/");
+//        driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
+
+        // Navigation Commands
+        driver.navigate().back();
+        driver.navigate().forward();
+        driver.navigate().refresh();
 
         // Close
 //        driver.close();
