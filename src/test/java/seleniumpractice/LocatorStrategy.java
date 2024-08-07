@@ -34,14 +34,17 @@ public class LocatorStrategy {
         driver.findElement(By.name("email"));
         driver.findElement(By.name("Password"));
 
-        // 5. ID
+        // 5. CLASSNAME
+        driver.findElement(By.className("dropbtn"));
+
+        // 6. ID
         driver.findElement(By.id("pass"));
 
-        // 6. LINK TEXT
+        // 7. LINK TEXT
         driver.findElement(By.linkText("Learning Hub"));
         driver.findElement(By.linkText("Click to practice iframe inside shadow dom scenario"));
 
-        // 7. PARTIAL LINK TEXT
+        // 8. PARTIAL LINK TEXT
         driver.findElement(By.partialLinkText("Learning Hu"));
         driver.findElement(By.partialLinkText("Click to Download PNG"));
         driver.findElement(By.partialLinkText("Click to practice"));
