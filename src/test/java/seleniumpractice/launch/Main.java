@@ -1,4 +1,4 @@
-package seleniumpractice;
+package seleniumpractice.launch;
 
 import com.github.javafaker.Faker;
 
