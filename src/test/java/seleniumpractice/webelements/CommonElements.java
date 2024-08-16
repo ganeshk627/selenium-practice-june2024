@@ -18,7 +18,6 @@ public class CommonElements {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
         driver.get("https://www.google.com/");
-        driver.manage().window().maximize();
 
 
         // 1 .input - sendKeys, clear
