@@ -5,32 +5,30 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
+import seleniumpractice.CommonActions;
 
 import java.time.Duration;
 
-public class MouseHover {
+public class DoubleClick {
     public static void main(String[] args) {
+        CommonActions commonActions = new CommonActions();
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-        driver.get("https://selectorshub.com/xpath-practice-page/");
+        driver.get("https://www.plus2net.com/javascript_tutorial/ondblclick-demo.php");
 
 
-        WebElement checkouthere = driver.findElement(By.xpath("//button[@class='dropbtn']"));
 
-        // Mouse hover and click
+        // Mouse actions class
         Actions actions = new Actions(driver);
-        actions.moveToElement(checkouthere)
-//                .click()
+
+      // Double click
+        WebElement dbl = driver.findElement(By.xpath("//div[@id='box']"));
+        actions.doubleClick(dbl)
                 .build().perform();
-        //// Seperately
-// mouse hover
-//        actions.moveToElement(checkouthere)
-//                .build().perform();
-        // mouse left click
-//        actions.click(checkouthere)
-//                .build().perform();
 
+        commonActions.waitFor(5); // wait for 5 seconds
 
+        driver.quit();
     }
 }
