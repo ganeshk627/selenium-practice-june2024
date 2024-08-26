@@ -1,4 +1,4 @@
-package seleniumpractice.simplelogin;
+package seleniumpractice.scenarios;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
